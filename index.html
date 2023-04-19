@@ -10,8 +10,28 @@
 		<link rel="icon" type="image/x-icon" href="images/Favicon.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		
+
+		<!-- stuff for pop up videos following https://www.youtube.com/watch?v=US8ePkxYI3E-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		.mfp-hide{
+			display : none !important;
+		}
+
+		iframe{
+			margin-left:0% ;
+		}
+		</style>
+
 	</head>
 	<body class="is-preload">
 
@@ -96,9 +116,21 @@
 								<div class="inner">
 									<h2>Titan's Roots</h2>
 									<h3>C# / Unity</h3>
-									<p>This is the project I made duuring the 2023 Global Games Jam.</p>
+									<p>This is the project I made during the 2023 Global Games Jam.</p>
 									<ul class="actions">
-										<!--<li><a href="generic.html" class="button">See more</a></li>-->
+										<li><a href="#Titans" class="button"id="videolink">See more</a></li>
+										
+										<div id="Titans" class="mfp-hide" style="max-width: 17%; margin: 0 auto">
+											<iframe width="720" height="480" src="https://www.youtube.com/embed/FOylzuvFABU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+										</div>
+
+										<script>
+											$('#videolink').magnificPopup({
+												type:'inline',
+												midClick:true
+											})
+										</script>
+
 									</ul>
 								</div>
 							</div>
